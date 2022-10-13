@@ -11,6 +11,8 @@ import com.dev.curso.entities.User;
 @RequestMapping(value = "/users")
 public class UserController {
 
+	
+	
 	@GetMapping
 	public ResponseEntity<User> findAll() {
 		User u = new User(1l, "Carlos", "carlos@gmail.com", "61999656158", "carlos8245");
