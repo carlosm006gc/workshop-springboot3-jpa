@@ -30,7 +30,7 @@ public class UserController {
 		List<User> list = userService.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-	@GetMapping("/{id}")
+	@GetMapping(value ="/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
 		User user = userService.findById(id); 
 		return ResponseEntity.ok().body(user);
@@ -42,7 +42,7 @@ public class UserController {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(user.getId()).toUri();
 		return ResponseEntity.created(uri).body(user);
 	}
-	@DeleteMapping
+	@DeleteMapping(value ="/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id){
 		userService.delete(id);
 		return ResponseEntity.noContent().build();
