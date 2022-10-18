@@ -37,9 +37,12 @@ Tratamento de exceções
 ### Pré-requisitos: Java 11
 
 - clonar repositório
+
 git clone https://github.com/carlosm006gc/workshop-springboot3-jpa.git
 
 - entrar na pasta do projeto back end
+
 Demo
 - executar o projeto
+
 ./mvnw spring-boot:run
